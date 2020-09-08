@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="qt" fetch="https://github.com/meta-qt5/"/>
+    <remote name="wfi" fetch="https://github.com/wolfgangFischerMas"/>
+
+    <project name="meta-qt5"
+        remote="qt"
+        revision="thud"
+        path="sources/meta-qt5"/>
+
+    <project name="meta-aufgabe3"
+        remote="wfi"
+        revision="master"
+        path="sources/meta-aufgabe3"/>
+
+</manifest>
+
+
