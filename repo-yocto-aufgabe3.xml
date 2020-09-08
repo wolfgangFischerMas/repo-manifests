@@ -14,6 +14,11 @@
         revision="master"
         path="sources/meta-aufgabe3"/>
 
+    <project name="yocto-prj-aufgabe3"
+        remote="wfi"
+        revision="master"
+        path="build-rpi3-aufgabe3/conf"/>
+        
 </manifest>
 
 
