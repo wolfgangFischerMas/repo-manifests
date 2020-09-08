@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-manifest>
+<manifest>
 
     <remote name="oe" fetch="git://git.openembedded.org"/>
     <remote name="yocto" fetch="git://git.yoctoproject.org"/>
@@ -12,12 +12,12 @@ manifest>
         revision="thud"
         path="sources/meta-openembedded"/>
 
-     <project name="poky"
+    <project name="poky"
         remote="yocto"
         revision="thud"
         path="sources/poky"/>
 
-   <project name="meta-raspberrypi"
+    <project name="meta-raspberrypi"
         remote="raspberrypi"
         revision="thud"
         path="sources/meta-raspberrypi"/>
