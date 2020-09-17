@@ -1,13 +1,34 @@
 # repo-manifests
 
 ## installation
+sudo apt-get update && sudo apt-get upgrade
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker [user_name]
+docker version
+docker info
+docker run hello-world
+
+
+### 1. create working directory
+mkdir /public/Work
+
+
+### 2. prepare dr. yocto
 cd /public/Work
 ./dr-yocto/run-shell.sh 18.04
+git clone https://github.com/bstubert/dr-yocto.git
+cd dr-yocto
+git checkout ubuntu-18.04
+./build.sh 18.04 ./18.04
 
+
+mkdir /public/Work/yoctTaskS
 rm -rf /public/Work/yoctTaskS/build-rpi3-aufgabe3/
 rm -rf /public/Work/yoctTaskS/sources/
 ls -la /public/Work/yoctTaskS/
 cd /public/Work/yoctTaskS
+repo init -u https://github.com/wolfgangFischerMas/repo-manifests.git -m repo-yocto-aufgabe3.xml 
 repo sync 
 
 export TEMPLATECONF=/public/Work/yoctTaskS/sources/meta-aufgabe3/custom
