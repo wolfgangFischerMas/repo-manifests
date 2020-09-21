@@ -2,7 +2,7 @@
 
 
 doAll()             {
-    instlDockr
+    instlDockr$1
     preprDryoct
     runDryoct
     instRepstrTask3
@@ -11,7 +11,7 @@ doAll()             {
 help()              {
 echo "USAGE $0
 doAll
-instlDockr
+instlDockr [usrNam]
 preprDryoct
 runDryoct
 instRepstrTask3
@@ -19,10 +19,11 @@ bitbkImg
 "
 }
 instlDockr()        {
+    local usrNam="$1"
     sudo apt-get update && sudo apt-get upgrade
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh get-docker.sh
-    sudo usermod -aG docker [user_name]
+    sudo usermod -aG docker "$usrNam"
     docker version
     docker info
     docker run hello-world
