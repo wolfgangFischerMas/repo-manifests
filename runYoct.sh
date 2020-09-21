@@ -9,7 +9,6 @@ doAll()             {
     bitbkImg
 }
 help()              {
-
 echo "USAGE $0
 doAll
 instlDockr
