@@ -9,8 +9,9 @@ doAll()             {
     bitbkImg
 }
 help()              {
-doAll
+
 echo "USAGE $0
+doAll
 instlDockr
 preprDryoct
 runDryoct
